@@ -27,7 +27,7 @@ const shots = [
 ];
 
 async function assertReady(page) {
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load", { timeout: 15000 }).catch(() => {});
   await page.getByText("Direct-download alternatives").first().waitFor({ timeout: 15000 });
   await page.getByText("Quiet sponsor slot available").first().waitFor({ timeout: 15000 });
 }
@@ -48,9 +48,10 @@ try {
     if (shot.path === "/") {
       await assertReady(page);
     } else {
-      await page.waitForLoadState("networkidle");
+      await page.waitForLoadState("load", { timeout: 15000 }).catch(() => {});
       await page.getByRole("heading", { name: "Rectangle" }).waitFor({ timeout: 15000 });
     }
+    await page.waitForTimeout(1200);
     await page.screenshot({
       path: resolve(outputDir, shot.name),
       fullPage: true
