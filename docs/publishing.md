@@ -6,32 +6,36 @@ This guide is the operator path for publishing MacAltHub across the website, mac
 
 - Version source: `VERSION`
 - Changelog: `CHANGELOG.md`
-- Website config: `vercel.json`
+- Website configs: `.github/workflows/pages.yml`, `wrangler.jsonc`
 - macOS appcast: `content/releases/macalthub-appcast.json`
 - Release manifest: `dist/release-manifest.json`
-- GitHub workflows: `.github/workflows/catalog.yml`, `.github/workflows/web.yml`, `.github/workflows/release.yml`
+- GitHub workflows: `.github/workflows/catalog.yml`, `.github/workflows/web.yml`, `.github/workflows/pages.yml`, `.github/workflows/release.yml`
 
 ## Web Publish
 
-Vercel is the expected host.
+GitHub Pages is the primary no-Vercel web host. The static build bakes verified direct-download URLs into the catalog pages, so it does not need a server route for downloads.
 
 ```bash
 npm run release:prepare
 npm run typecheck
 npm test
-npm run build
+npm run build:pages
 npm run smoke:web
 npm run screenshots:web
-npx vercel --yes
 ```
 
-For production:
+The pushed `main` branch runs `.github/workflows/pages.yml` and deploys `apps/web/out`.
+
+Cloudflare is the second no-Vercel path:
 
 ```bash
-npx vercel --prod --yes
+npm run build:static
+npx wrangler@latest deploy
 ```
 
-Set these Vercel environment variables when available:
+Cloudflare uses `wrangler.jsonc` with Workers Static Assets. The build output is `apps/web/out`.
+
+Set these environment variables when available:
 
 - `NEXT_PUBLIC_ETHICALADS_PUBLISHER`: enables the live EthicalAds slot.
 - `NEXT_PUBLIC_SITE_URL`: canonical production URL.
@@ -43,7 +47,7 @@ The ad component renders a quiet sponsor-ready fallback until `NEXT_PUBLIC_ETHIC
 The recommended repo target is `spooftrap-app/mac-alt-hub`.
 
 ```bash
-gh repo create spooftrap-app/mac-alt-hub --private --source=. --remote=origin --push
+gh repo create spooftrap-app/mac-alt-hub --public --source=. --remote=origin --push
 ```
 
 If the repo already exists:
@@ -81,7 +85,7 @@ Use `apps/chatgpt/chatgpt-app-submission.json` and `docs/chatgpt-app-submission.
 
 ## Rollback
 
-1. Revert the Vercel production alias to the previous deployment.
+1. Re-run the previous successful GitHub Pages workflow or roll back the Cloudflare Worker version.
 2. Mark the GitHub release as a prerelease or delete the broken asset.
 3. Restore the previous `content/releases/macalthub-appcast.json`.
 4. Create a patch version and run the full release checklist again.

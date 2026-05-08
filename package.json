@@ -12,6 +12,8 @@
   "scripts": {
     "dev": "npm run dev -w @macalthub/web",
     "build": "npm run build -w @macalthub/catalog && npm run build -w @macalthub/chatgpt && npm run build -w @macalthub/web",
+    "build:static": "npm run build -w @macalthub/catalog && npm run build -w @macalthub/chatgpt && MACALTHUB_STATIC_EXPORT=1 npm run build -w @macalthub/web",
+    "build:pages": "npm run build -w @macalthub/catalog && npm run build -w @macalthub/chatgpt && NEXT_PUBLIC_BASE_PATH=/mac-alt-hub MACALTHUB_STATIC_EXPORT=1 npm run build -w @macalthub/web",
     "typecheck": "npm run typecheck -w @macalthub/catalog && npm run typecheck -w @macalthub/chatgpt && npm run typecheck -w @macalthub/web",
     "lint": "npm run lint -w @macalthub/web",
     "test": "npm run test -w @macalthub/catalog && npm run test -w @macalthub/chatgpt",
@@ -22,6 +24,7 @@
     "release:package": "node scripts/package-macos-release.mjs",
     "smoke:web": "node scripts/smoke-web.mjs",
     "screenshots:web": "node scripts/capture-screenshots.mjs",
+    "publish:cloudflare": "npm run build:static && npx wrangler@latest deploy",
     "macos:build": "cd apps/macos && swift build",
     "macos:run": "cd apps/macos && ./script/build_and_run.sh",
     "launch:assets": "node scripts/generate-launch-assets.mjs"

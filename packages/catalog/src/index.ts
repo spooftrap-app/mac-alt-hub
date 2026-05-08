@@ -1,4 +1,4 @@
-import seedCatalog from "../../../content/catalog.seed.json";
+import resolvedCatalog from "../../../content/catalog.resolved.json";
 
 export type DownloadKind = "github-release" | "homebrew-cask" | "official-direct" | "release-page";
 
@@ -37,6 +37,13 @@ export type CatalogApp = {
   badges: string[];
   trust: string[];
   resolver: DownloadResolver;
+  resolvedDownload?: {
+    kind: DownloadKind;
+    url: string;
+    label: string;
+    source: string;
+    verifiedAt: string;
+  };
   notes: string;
 };
 
@@ -60,7 +67,7 @@ export const blockedDownloadHosts = [
   "patreon.com"
 ] as const;
 
-export const catalog = seedCatalog as CatalogApp[];
+export const catalog = resolvedCatalog as CatalogApp[];
 
 export const categories: CategorySummary[] = Array.from(
   catalog.reduce((map, item) => {
@@ -152,7 +159,15 @@ export function downloadLabel(app: CatalogApp): string {
 }
 
 export function directDownloadPath(app: CatalogApp): string {
-  return `/api/download/${app.id}`;
+  return app.resolvedDownload?.url ?? fallbackDownloadUrl(app);
+}
+
+export function fallbackDownloadUrl(app: CatalogApp): string {
+  if (app.resolver.kind === "github-release" || app.resolver.kind === "homebrew-cask") {
+    return app.resolver.fallbackUrl;
+  }
+
+  return app.resolver.url;
 }
 
 export function isBlockedDownloadUrl(url: string): boolean {
@@ -194,4 +209,3 @@ export function validateCatalog(items: CatalogApp[] = catalog): string[] {
 
   return errors;
 }
-

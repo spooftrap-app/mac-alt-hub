@@ -18,6 +18,7 @@ npm run version:check
 npm run typecheck
 npm test
 npm run build
+npm run build:static
 npm run macos:build
 ```
 
@@ -68,8 +69,9 @@ The current updater opens a verified release URL and never executes installers. 
 - [ ] Tag with `v<version>`.
 - [ ] Push `main` and the version tag.
 - [ ] Create or update the GitHub release with the zip, checksum, appcast, and manifest.
-- [ ] Deploy the website to Vercel.
-- [ ] Set `NEXT_PUBLIC_ETHICALADS_PUBLISHER` in Vercel when EthicalAds approves the publisher ID.
+- [ ] Confirm `.github/workflows/pages.yml` deployed GitHub Pages.
+- [ ] Deploy `apps/web/out` to Cloudflare with `npm run publish:cloudflare` if Cloudflare is connected.
+- [ ] Set `NEXT_PUBLIC_ETHICALADS_PUBLISHER` in the chosen web host when EthicalAds approves the publisher ID.
 - [ ] Run `MACALTHUB_BASE_URL=<production-url> npm run smoke:web`.
 - [ ] Run `MACALTHUB_BASE_URL=<production-url> npm run screenshots:web`.
 

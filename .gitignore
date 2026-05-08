@@ -11,6 +11,7 @@ playwright-report/
 test-results/
 apps/macos/.build/
 apps/macos/dist/
+apps/web/out/
 *.xcuserstate
 *.tgz
 *.tsbuildinfo

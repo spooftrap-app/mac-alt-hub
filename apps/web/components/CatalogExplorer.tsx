@@ -30,6 +30,12 @@ type Props = {
   featured: CatalogApp[];
 };
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+function assetPath(path: string): string {
+  return `${basePath}${path}`;
+}
+
 function AppIcon({ app }: { app: CatalogApp }) {
   return (
     <span className="app-icon" style={{ background: app.accent }}>
@@ -253,7 +259,7 @@ export function CatalogExplorer({ apps, categories, featured }: Props) {
             <span />
           </div>
           <div className="brand-lockup">
-            <img className="brand-mark" src="/assets/macalthub-mark.svg" alt="" />
+            <img className="brand-mark" src={assetPath("/assets/macalthub-mark.svg")} alt="" />
             <div>
               <strong>MacAltHub</strong>
               <span>Paid app alternatives</span>
@@ -294,7 +300,14 @@ export function CatalogExplorer({ apps, categories, featured }: Props) {
             </button>
           </header>
 
-          <section className="hero-panel">
+          <section
+            className="hero-panel"
+            style={
+              {
+                "--hero-asset": `url("${assetPath("/assets/app-store-surface.svg")}")`
+              } as React.CSSProperties
+            }
+          >
             <div className="hero-copy">
               <h1>Direct-download alternatives for paid Mac utilities.</h1>
               <p>

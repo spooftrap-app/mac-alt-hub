@@ -1,6 +1,6 @@
 # MacAltHub Automation
 
-MacAltHub uses GitHub Actions plus Vercel project settings for recurring checks and release publishing.
+MacAltHub uses GitHub Actions plus optional Cloudflare Workers Static Assets for recurring checks and release publishing.
 
 ## Scheduled Catalog Verification
 
@@ -16,8 +16,17 @@ Workflow: `.github/workflows/web.yml`
 
 - Runs on pushes and pull requests touching the web app, catalog, design tokens, or scripts.
 - Installs Node 22 dependencies.
-- Runs release metadata prep, typecheck, tests, production build, smoke checks, and Playwright screenshots.
+- Runs release metadata prep, typecheck, tests, production build, static export, smoke checks, and Playwright screenshots.
 - Uploads screenshots from `docs/screenshots`.
+
+## GitHub Pages
+
+Workflow: `.github/workflows/pages.yml`
+
+- Runs on pushes to `main` and manual dispatch.
+- Builds a static export with `NEXT_PUBLIC_BASE_PATH=/mac-alt-hub`.
+- Uploads `apps/web/out` to GitHub Pages.
+- Publishes the public catalog without Vercel or a Node server.
 
 ## Release CI
 
@@ -46,6 +55,7 @@ npm run release:prepare
 npm run typecheck
 npm test
 npm run build
+npm run build:static
 npm run smoke:web
 npm run screenshots:web
 npm run release:package
@@ -54,13 +64,13 @@ npm run release:package
 Use `MACALTHUB_BASE_URL` to point smoke and screenshots at preview or production:
 
 ```bash
-MACALTHUB_BASE_URL=https://your-preview.vercel.app npm run smoke:web
-MACALTHUB_BASE_URL=https://your-preview.vercel.app npm run screenshots:web
+MACALTHUB_BASE_URL=https://spooftrap-app.github.io/mac-alt-hub npm run smoke:web
+MACALTHUB_BASE_URL=https://spooftrap-app.github.io/mac-alt-hub npm run screenshots:web
 ```
 
 ## Monitoring Hooks To Add After Launch
 
-- Vercel Analytics or Speed Insights for Core Web Vitals.
+- Cloudflare Web Analytics or GitHub Pages uptime checks for Core Web Vitals and availability.
 - GitHub scheduled issue if catalog verification fails repeatedly.
-- Uptime check against `/`, `/apps/rectangle`, and `/api/download/rectangle`.
+- Uptime check against `/` and `/apps/rectangle`.
 - EthicalAds dashboard check once `NEXT_PUBLIC_ETHICALADS_PUBLISHER` is live.

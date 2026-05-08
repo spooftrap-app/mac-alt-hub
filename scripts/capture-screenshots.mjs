@@ -20,7 +20,7 @@ const shots = [
   },
   {
     name: "detail-rectangle.png",
-    path: "/apps/rectangle",
+    path: "/apps/rectangle/",
     viewport: { width: 1280, height: 960 },
     reducedMotion: "reduce"
   }
@@ -44,7 +44,7 @@ try {
       reducedMotion: shot.reducedMotion
     });
     const page = await context.newPage();
-    await page.goto(new URL(shot.path, baseUrl).toString(), { waitUntil: "domcontentloaded" });
+    await page.goto(resolvePath(shot.path), { waitUntil: "domcontentloaded" });
     if (shot.path === "/") {
       await assertReady(page);
     } else {
@@ -60,4 +60,9 @@ try {
   }
 } finally {
   await browser.close();
+}
+
+function resolvePath(path) {
+  const normalizedBase = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
+  return new URL(path.replace(/^\//, ""), normalizedBase).toString();
 }

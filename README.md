@@ -43,6 +43,12 @@ npm run version:check
 npm run release:package
 ```
 
+Build the static no-Vercel website:
+
+```bash
+npm run build:static
+```
+
 Smoke-test the running website:
 
 ```bash
