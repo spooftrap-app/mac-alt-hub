@@ -52,7 +52,7 @@ jobs:
           exit 1
       - run: npm run smoke:web
       - run: npm run screenshots:web
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: web-screenshots
