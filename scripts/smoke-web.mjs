@@ -8,8 +8,27 @@ async function check(path, expectedStatus = 200) {
   return response;
 }
 
-await check("/");
-await check("/apps/rectangle");
+const home = await check("/");
+const homeText = await home.text();
+for (const phrase of [
+  "Direct-download alternatives",
+  "Sponsor-ready",
+  "No Discord gates",
+  "verified alternatives"
+]) {
+  if (!homeText.includes(phrase)) {
+    throw new Error(`Homepage did not include expected phrase: ${phrase}`);
+  }
+}
+
+const detail = await check("/apps/rectangle");
+const detailText = await detail.text();
+for (const phrase of ["Rectangle", "Verified", "Download"]) {
+  if (!detailText.includes(phrase)) {
+    throw new Error(`Rectangle detail page did not include expected phrase: ${phrase}`);
+  }
+}
+
 const download = await check("/api/download/rectangle", 307);
 const location = download.headers.get("location") ?? "";
 if (!location.includes("github.com/rxhanson/Rectangle")) {
@@ -17,4 +36,3 @@ if (!location.includes("github.com/rxhanson/Rectangle")) {
 }
 
 console.log(`Web smoke checks passed against ${baseUrl}`);
-

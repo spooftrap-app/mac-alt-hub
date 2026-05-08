@@ -19,7 +19,9 @@
     "sync:macos": "node scripts/sync-macos-catalog.mjs",
     "version:check": "node scripts/check-version.mjs",
     "release:prepare": "node scripts/prepare-release.mjs && npm run sync:macos && npm run version:check",
+    "release:package": "node scripts/package-macos-release.mjs",
     "smoke:web": "node scripts/smoke-web.mjs",
+    "screenshots:web": "node scripts/capture-screenshots.mjs",
     "macos:build": "cd apps/macos && swift build",
     "macos:run": "cd apps/macos && ./script/build_and_run.sh",
     "launch:assets": "node scripts/generate-launch-assets.mjs"
@@ -28,6 +30,7 @@
     "node": ">=22.0.0"
   },
   "devDependencies": {
+    "playwright": "^1.56.1",
     "typescript": "^5.9.3"
   }
 }

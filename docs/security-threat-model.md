@@ -28,7 +28,7 @@
 - Blocked host list for Discord, social networks, shorteners, and patronage pages.
 - Download resolution is read-only and never executes installers.
 - GitHub/Homebrew downloads are resolved from official APIs.
-- EthicalAds slot is hidden until configured.
+- EthicalAds slot renders a quiet fallback until configured, then loads only the EthicalAds client script.
 - ChatGPT tools are read-only with tool annotations.
 - Widget CSP allows only required resource hosts.
 
@@ -38,4 +38,3 @@
 - Add release freshness score.
 - Add human review queue for catalog submissions.
 - Add CI diff review for changed resolver targets.
-

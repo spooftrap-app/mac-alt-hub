@@ -335,6 +335,25 @@ export function CatalogExplorer({ apps, categories, featured }: Props) {
             </motion.div>
           </section>
 
+          <section className="proof-strip" aria-label="Catalog quality summary">
+            <div>
+              <strong>{apps.length}</strong>
+              <span>curated Mac utilities</span>
+            </div>
+            <div>
+              <strong>{categories.length}</strong>
+              <span>workflow categories</span>
+            </div>
+            <div>
+              <strong>0</strong>
+              <span>Discord-gated download CTAs</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>compare slots per tray</span>
+            </div>
+          </section>
+
           <AdSlot />
 
           {comparedApps.length >= 2 ? (

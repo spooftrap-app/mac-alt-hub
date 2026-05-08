@@ -3,16 +3,17 @@
   "channel": "stable",
   "currentVersion": "0.1.0",
   "minimumSystemVersion": "14.0",
-  "generatedAt": "2026-05-08T19:30:34.486Z",
+  "generatedAt": "2026-05-08T19:47:05.331Z",
   "releases": [
     {
       "version": "0.1.0",
       "build": "1",
       "date": "2026-05-08",
       "notes": "Initial catalog, website, macOS app, ChatGPT app, direct-download resolver, and verification workflow.",
-      "downloadUrl": "https://github.com/macalthub/macalthub/releases/tag/v0.1.0",
+      "downloadUrl": "https://github.com/spooftrap-app/mac-alt-hub/releases/download/v0.1.0/MacAltHub-0.1.0.zip",
       "signature": null,
-      "sha256": null
+      "sha256": "50a93cc769138dae1316d5328d0eea192c02a354d6f94a7dfc217f0120fc775a",
+      "sourceUrl": "https://github.com/spooftrap-app/mac-alt-hub/releases/tag/v0.1.0"
     }
   ]
 }

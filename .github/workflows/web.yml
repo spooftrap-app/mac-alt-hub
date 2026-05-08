@@ -1,0 +1,59 @@
+name: Web CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/web/**"
+      - "apps/chatgpt/**"
+      - "packages/**"
+      - "content/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "vercel.json"
+  pull_request:
+    paths:
+      - "apps/web/**"
+      - "apps/chatgpt/**"
+      - "packages/**"
+      - "content/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "vercel.json"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run release:prepare
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: Start production web server
+        run: |
+          npm run start -w @macalthub/web &
+          for i in {1..30}; do
+            if curl -fsS http://localhost:3000 >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+      - run: npm run smoke:web
+      - run: npm run screenshots:web
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: web-screenshots
+          path: docs/screenshots

@@ -1,57 +1,76 @@
 # MacAltHub Release Checklist
 
-## Versioning
+Use this as the launch-room checklist for every public release.
 
-1. Update `VERSION`.
-2. Add an entry to `CHANGELOG.md`.
-3. Run `npm run release:prepare`.
-4. Commit changes and tag with `v<version>`.
+## 1. Version And Catalog
 
-## Quality Gates
+- [ ] Update `VERSION`.
+- [ ] Add the release notes to `CHANGELOG.md`.
+- [ ] Update or add catalog entries in `content/catalog.seed.json`.
+- [ ] Run `npm run release:prepare`.
+- [ ] Confirm `content/releases/macalthub-appcast.json` and `dist/release-manifest.json` changed as expected.
+
+## 2. Quality Gates
 
 ```bash
+npm run verify:catalog
 npm run version:check
 npm run typecheck
 npm test
 npm run build
-npm run sync:macos
 npm run macos:build
-npm run smoke:web
-```
-
-## Catalog Gates
-
-```bash
-npm run verify:catalog
 ```
 
 Warnings from GitHub rate limiting are acceptable only when the fallback URL is an official release page and not a blocked host.
 
-## macOS Release
+## 3. Running App Checks
+
+Start the web app, then run smoke checks and capture screenshots:
+
+```bash
+npm run dev
+npm run smoke:web
+npm run screenshots:web
+```
+
+Run the macOS app smoke:
 
 ```bash
 cd apps/macos
-BUILD_NUMBER=1 ./script/build_and_run.sh --package-only
-ditto -c -k --sequesterRsrc --keepParent dist/MacAltHub.app ../../MacAltHub.app.zip
+./script/build_and_run.sh --verify
 ```
 
-For real automatic install updates, add Sparkle signing keys and replace the placeholder `signature` and `sha256` fields in `content/releases/macalthub-appcast.json`.
+Check these visual states:
 
-## Web Publish
+- [ ] Homepage catalog loads with the sidebar, search, hero, ad/sponsor slot, and app cards.
+- [ ] Mobile homepage does not overlap text or controls.
+- [ ] Detail page shows trusted download, source, architecture, and similar apps.
+- [ ] macOS app opens to Catalog Home, then search/detail/download flows work.
 
-The root `vercel.json` builds the web workspace from the monorepo. The claimable deploy command is:
+## 4. Package macOS
 
 ```bash
-bash /Users/28atotten/.codex/skills/vercel-deploy/scripts/deploy.sh /Users/28atotten/Projects/mac-alt-hub
+npm run release:package
 ```
 
-If the claimable deployment endpoint returns a build-in-progress response without URLs, push the committed repo to GitHub and connect it to Vercel using:
+This creates:
 
-- Build command: `npm run build -w @macalthub/web`
-- Install command: `npm install`
-- Output directory: `apps/web/.next`
+- `dist/MacAltHub-<version>.zip`
+- `dist/MacAltHub-<version>.zip.sha256`
+- refreshed `content/releases/macalthub-appcast.json`
+- refreshed `dist/release-manifest.json`
 
-## Ads
+The current updater opens a verified release URL and never executes installers. For fully automatic in-app install updates, add Sparkle signing keys, notarization, and signed appcast signatures.
 
-Set `NEXT_PUBLIC_ETHICALADS_PUBLISHER` in Vercel to enable live EthicalAds. Without it, MacAltHub shows a quiet sponsor-ready fallback slot.
+## 5. Publish
 
+- [ ] Commit release changes.
+- [ ] Tag with `v<version>`.
+- [ ] Push `main` and the version tag.
+- [ ] Create or update the GitHub release with the zip, checksum, appcast, and manifest.
+- [ ] Deploy the website to Vercel.
+- [ ] Set `NEXT_PUBLIC_ETHICALADS_PUBLISHER` in Vercel when EthicalAds approves the publisher ID.
+- [ ] Run `MACALTHUB_BASE_URL=<production-url> npm run smoke:web`.
+- [ ] Run `MACALTHUB_BASE_URL=<production-url> npm run screenshots:web`.
+
+Publishing details live in `docs/publishing.md`; recurring automation details live in `docs/automation.md`.

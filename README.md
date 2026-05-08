@@ -11,6 +11,7 @@ MacAltHub is a macOS-style hub for finding trusted alternatives to paid Mac util
 - `packages/design` - Shared design tokens.
 - `docs` - Launch plan, design system, privacy policy, data/source policy, deck outline, security notes, and marketing briefs.
 - `scripts` - Catalog verification, macOS data sync, and launch artifact generation.
+- `.github` - Catalog, web, dependency, and release automation.
 
 ## Quick Start
 
@@ -39,13 +40,17 @@ Prepare a versioned release:
 ```bash
 npm run release:prepare
 npm run version:check
+npm run release:package
 ```
 
 Smoke-test the running website:
 
 ```bash
 npm run smoke:web
+npm run screenshots:web
 ```
+
+Publishing steps live in `docs/publishing.md`; recurring checks and CI automation live in `docs/automation.md`.
 
 ## Direct Download Policy
 

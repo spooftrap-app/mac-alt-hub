@@ -41,7 +41,7 @@
       "url": "https://open-wispr.pages.dev/",
       "label": "Official release page",
       "source": "https://open-wispr.pages.dev/",
-      "verifiedAt": "2026-05-08T19:06:35.390Z"
+      "verifiedAt": "2026-05-08T19:41:15.986Z"
     }
   },
   {
@@ -83,7 +83,7 @@
       "url": "https://whispur.app/",
       "label": "Official release page",
       "source": "https://whispur.app/",
-      "verifiedAt": "2026-05-08T19:06:35.397Z"
+      "verifiedAt": "2026-05-08T19:41:15.990Z"
     }
   },
   {
@@ -125,7 +125,7 @@
       "url": "https://getwren.dev/",
       "label": "Official release page",
       "source": "https://getwren.dev/",
-      "verifiedAt": "2026-05-08T19:06:35.397Z"
+      "verifiedAt": "2026-05-08T19:41:15.990Z"
     }
   },
   {
@@ -171,7 +171,7 @@
       "url": "https://github.com/ggerganov/whisper.cpp/releases/latest",
       "label": "Official release page",
       "source": "https://github.com/ggerganov/whisper.cpp/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:35.397Z"
+      "verifiedAt": "2026-05-08T19:41:15.990Z"
     }
   },
   {
@@ -219,7 +219,7 @@
       "url": "https://github.com/rxhanson/Rectangle/releases/download/v0.95/Rectangle0.95.dmg",
       "label": "Rectangle0.95.dmg",
       "source": "https://github.com/rxhanson/Rectangle/releases/tag/v0.95",
-      "verifiedAt": "2026-05-08T19:06:35.945Z"
+      "verifiedAt": "2026-05-08T19:41:16.576Z"
     }
   },
   {
@@ -264,7 +264,7 @@
       "url": "https://github.com/nikitabobko/AeroSpace/releases",
       "label": "Official release page",
       "source": "https://github.com/nikitabobko/AeroSpace/releases",
-      "verifiedAt": "2026-05-08T19:06:35.946Z"
+      "verifiedAt": "2026-05-08T19:41:16.576Z"
     }
   },
   {
@@ -311,7 +311,7 @@
       "url": "https://github.com/lwouis/alt-tab-macos/releases/download/v10.12.0/AltTab-10.12.0.zip",
       "label": "AltTab-10.12.0.zip",
       "source": "https://github.com/lwouis/alt-tab-macos/releases/tag/v10.12.0",
-      "verifiedAt": "2026-05-08T19:06:36.369Z"
+      "verifiedAt": "2026-05-08T19:41:16.915Z"
     }
   },
   {
@@ -349,17 +349,16 @@
     "resolver": {
       "kind": "github-release",
       "repo": "jordanbaird/Ice",
-      "assetRegex": "(macos|darwin).*\\.(dmg|zip)$|\\.(dmg)$",
+      "assetRegex": "\\.(dmg|zip)$",
       "fallbackUrl": "https://github.com/jordanbaird/Ice/releases/latest"
     },
     "notes": "The flagship open alternative after Bartender trust concerns.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/jordanbaird/Ice/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/jordanbaird/Ice/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:36.680Z",
-      "warning": "No release asset matched (macos|darwin).*\\.(dmg|zip)$|\\.(dmg)$"
+      "kind": "github-release",
+      "url": "https://github.com/jordanbaird/Ice/releases/download/0.11.12/Ice.zip",
+      "label": "Ice.zip",
+      "source": "https://github.com/jordanbaird/Ice/releases/tag/0.11.12",
+      "verifiedAt": "2026-05-08T19:41:17.235Z"
     }
   },
   {
@@ -405,7 +404,7 @@
       "url": "https://github.com/dwarvesf/hidden/releases/download/v1.10/Hidden-Bar-v1.10-macos.zip",
       "label": "Hidden-Bar-v1.10-macos.zip",
       "source": "https://github.com/dwarvesf/hidden/releases/tag/v1.10",
-      "verifiedAt": "2026-05-08T19:06:36.993Z"
+      "verifiedAt": "2026-05-08T19:41:17.547Z"
     }
   },
   {
@@ -453,7 +452,7 @@
       "url": "https://github.com/p0deje/Maccy/releases/download/2.6.1/Maccy.app.zip",
       "label": "Maccy.app.zip",
       "source": "https://github.com/p0deje/Maccy/releases/tag/2.6.1",
-      "verifiedAt": "2026-05-08T19:06:37.318Z"
+      "verifiedAt": "2026-05-08T19:41:17.858Z"
     }
   },
   {
@@ -499,7 +498,7 @@
       "url": "https://qsapp.com/download.php",
       "label": "Official release page",
       "source": "https://qsapp.com/download.php",
-      "verifiedAt": "2026-05-08T19:06:37.318Z"
+      "verifiedAt": "2026-05-08T19:41:17.859Z"
     }
   },
   {
@@ -547,7 +546,7 @@
       "url": "https://github.com/Hammerspoon/hammerspoon/releases/download/1.1.1/Hammerspoon-1.1.1.zip",
       "label": "Hammerspoon-1.1.1.zip",
       "source": "https://github.com/Hammerspoon/hammerspoon/releases/tag/1.1.1",
-      "verifiedAt": "2026-05-08T19:06:37.650Z"
+      "verifiedAt": "2026-05-08T19:41:18.161Z"
     }
   },
   {
@@ -594,7 +593,7 @@
       "url": "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v16.0.0/Karabiner-Elements-16.0.0.dmg",
       "label": "Karabiner-Elements-16.0.0.dmg",
       "source": "https://github.com/pqrs-org/Karabiner-Elements/releases/tag/v16.0.0",
-      "verifiedAt": "2026-05-08T19:06:37.971Z"
+      "verifiedAt": "2026-05-08T19:41:18.561Z"
     }
   },
   {
@@ -642,7 +641,7 @@
       "url": "https://github.com/linearmouse/linearmouse/releases/download/v0.11.1/LinearMouse.dmg",
       "label": "LinearMouse.dmg",
       "source": "https://github.com/linearmouse/linearmouse/releases/tag/v0.11.1",
-      "verifiedAt": "2026-05-08T19:06:38.300Z"
+      "verifiedAt": "2026-05-08T19:41:18.880Z"
     }
   },
   {
@@ -689,7 +688,7 @@
       "url": "https://github.com/MonitorControl/MonitorControl/releases/download/v4.3.3/MonitorControl.4.3.3.dmg",
       "label": "MonitorControl.4.3.3.dmg",
       "source": "https://github.com/MonitorControl/MonitorControl/releases/tag/v4.3.3",
-      "verifiedAt": "2026-05-08T19:06:38.612Z"
+      "verifiedAt": "2026-05-08T19:41:19.198Z"
     }
   },
   {
@@ -736,7 +735,7 @@
       "url": "https://github.com/exelban/stats/releases/download/v2.12.13/Stats.dmg",
       "label": "Stats.dmg",
       "source": "https://github.com/exelban/stats/releases/tag/v2.12.13",
-      "verifiedAt": "2026-05-08T19:06:38.924Z"
+      "verifiedAt": "2026-05-08T19:41:19.506Z"
     }
   },
   {
@@ -783,7 +782,7 @@
       "url": "https://github.com/newmarcel/KeepingYouAwake/releases/download/1.6.8/KeepingYouAwake-1.6.8.zip",
       "label": "KeepingYouAwake-1.6.8.zip",
       "source": "https://github.com/newmarcel/KeepingYouAwake/releases/tag/1.6.8",
-      "verifiedAt": "2026-05-08T19:06:39.254Z"
+      "verifiedAt": "2026-05-08T19:41:19.813Z"
     }
   },
   {
@@ -829,7 +828,7 @@
       "url": "https://github.com/alienator88/Pearcleaner/releases/download/5.4.3/Pearcleaner-arm.zip",
       "label": "Pearcleaner-arm.zip",
       "source": "https://github.com/alienator88/Pearcleaner/releases/tag/5.4.3",
-      "verifiedAt": "2026-05-08T19:06:39.648Z"
+      "verifiedAt": "2026-05-08T19:41:20.131Z"
     }
   },
   {
@@ -872,7 +871,7 @@
       "url": "https://freemacsoft.net/appcleaner/",
       "label": "Official release page",
       "source": "https://freemacsoft.net/appcleaner/",
-      "verifiedAt": "2026-05-08T19:06:39.648Z"
+      "verifiedAt": "2026-05-08T19:41:20.131Z"
     }
   },
   {
@@ -916,7 +915,7 @@
       "url": "https://grandperspectiv.sourceforge.net/",
       "label": "Official release page",
       "source": "https://grandperspectiv.sourceforge.net/",
-      "verifiedAt": "2026-05-08T19:06:39.648Z"
+      "verifiedAt": "2026-05-08T19:41:20.131Z"
     }
   },
   {
@@ -959,7 +958,7 @@
       "url": "https://www.keka.io/",
       "label": "Official download",
       "source": "https://www.keka.io/",
-      "verifiedAt": "2026-05-08T19:06:39.648Z"
+      "verifiedAt": "2026-05-08T19:41:20.131Z"
     }
   },
   {
@@ -1006,7 +1005,7 @@
       "url": "https://github.com/ganeshrvel/openmtp/releases/download/v3.2.25/openmtp-3.2.25-mac-arm64.dmg",
       "label": "openmtp-3.2.25-mac-arm64.dmg",
       "source": "https://github.com/ganeshrvel/openmtp/releases/tag/v3.2.25",
-      "verifiedAt": "2026-05-08T19:06:40.056Z"
+      "verifiedAt": "2026-05-08T19:41:20.450Z"
     }
   },
   {
@@ -1053,7 +1052,7 @@
       "url": "https://github.com/iina/iina/releases/download/v1.4.2-build164/IINA.v1.4.2-build164.dmg",
       "label": "IINA.v1.4.2-build164.dmg",
       "source": "https://github.com/iina/iina/releases/tag/v1.4.2-build164",
-      "verifiedAt": "2026-05-08T19:06:40.369Z"
+      "verifiedAt": "2026-05-08T19:41:20.770Z"
     }
   },
   {
@@ -1100,7 +1099,7 @@
       "url": "https://github.com/HandBrake/HandBrake/releases/download/1.11.1/HandBrake-1.11.1.dmg",
       "label": "HandBrake-1.11.1.dmg",
       "source": "https://github.com/HandBrake/HandBrake/releases/tag/1.11.1",
-      "verifiedAt": "2026-05-08T19:06:40.696Z"
+      "verifiedAt": "2026-05-08T19:41:21.128Z"
     }
   },
   {
@@ -1147,7 +1146,7 @@
       "url": "https://github.com/transmission/transmission/releases/download/4.1.1/Transmission-4.1.1.dmg",
       "label": "Transmission-4.1.1.dmg",
       "source": "https://github.com/transmission/transmission/releases/tag/4.1.1",
-      "verifiedAt": "2026-05-08T19:06:41.083Z"
+      "verifiedAt": "2026-05-08T19:41:21.536Z"
     }
   },
   {
@@ -1193,7 +1192,7 @@
       "url": "https://update.cyberduck.io/Cyberduck-9.4.1.44384.zip",
       "label": "brew install --cask cyberduck",
       "source": "https://formulae.brew.sh/cask/cyberduck",
-      "verifiedAt": "2026-05-08T19:06:41.513Z"
+      "verifiedAt": "2026-05-08T19:41:21.900Z"
     }
   },
   {
@@ -1244,7 +1243,7 @@
       "url": "https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0.dmg",
       "label": "LocalSend-1.17.0.dmg",
       "source": "https://github.com/localsend/localsend/releases/tag/v1.17.0",
-      "verifiedAt": "2026-05-08T19:06:41.903Z"
+      "verifiedAt": "2026-05-08T19:41:22.249Z"
     }
   },
   {
@@ -1293,7 +1292,7 @@
       "url": "https://github.com/syncthing/syncthing-macos/releases/download/v2.0.14-1/Syncthing-2.0.14-1.dmg",
       "label": "Syncthing-2.0.14-1.dmg",
       "source": "https://github.com/syncthing/syncthing-macos/releases/tag/v2.0.14-1",
-      "verifiedAt": "2026-05-08T19:06:42.223Z"
+      "verifiedAt": "2026-05-08T19:41:22.565Z"
     }
   },
   {
@@ -1340,7 +1339,7 @@
       "url": "https://github.com/coteditor/CotEditor/releases/download/7.0.2/CotEditor_7.0.2.dmg",
       "label": "CotEditor_7.0.2.dmg",
       "source": "https://github.com/coteditor/CotEditor/releases/tag/7.0.2",
-      "verifiedAt": "2026-05-08T19:06:42.615Z"
+      "verifiedAt": "2026-05-08T19:41:22.870Z"
     }
   },
   {
@@ -1386,7 +1385,7 @@
       "url": "https://zed.dev/download",
       "label": "Official release page",
       "source": "https://zed.dev/download",
-      "verifiedAt": "2026-05-08T19:06:42.615Z"
+      "verifiedAt": "2026-05-08T19:41:22.870Z"
     }
   },
   {
@@ -1435,7 +1434,7 @@
       "url": "https://github.com/usebruno/bruno/releases/download/v3.3.0/bruno_3.3.0_arm64_mac.dmg",
       "label": "bruno_3.3.0_arm64_mac.dmg",
       "source": "https://github.com/usebruno/bruno/releases/tag/v3.3.0",
-      "verifiedAt": "2026-05-08T19:06:42.953Z"
+      "verifiedAt": "2026-05-08T19:41:23.187Z"
     }
   },
   {
@@ -1484,7 +1483,7 @@
       "url": "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v5.7.2/Beekeeper-Studio-5.7.2-arm64.dmg",
       "label": "Beekeeper-Studio-5.7.2-arm64.dmg",
       "source": "https://github.com/beekeeper-studio/beekeeper-studio/releases/tag/v5.7.2",
-      "verifiedAt": "2026-05-08T19:06:43.269Z"
+      "verifiedAt": "2026-05-08T19:41:23.517Z"
     }
   },
   {
@@ -1527,12 +1526,11 @@
     },
     "notes": "The best-known free Parallels alternative for Mac virtualization.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/utmapp/UTM/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/utmapp/UTM/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.316Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.dmg",
+      "label": "UTM.dmg",
+      "source": "https://github.com/utmapp/UTM/releases/tag/v4.7.5",
+      "verifiedAt": "2026-05-08T19:41:23.851Z"
     }
   },
   {
@@ -1576,12 +1574,11 @@
     },
     "notes": "CLI-focused alternative for Docker Desktop and OrbStack workflows.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/abiosoft/colima/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/abiosoft/colima/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.457Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/abiosoft/colima/releases/download/v0.10.1/colima-Darwin-arm64",
+      "label": "colima-Darwin-arm64",
+      "source": "https://github.com/abiosoft/colima/releases/tag/v0.10.1",
+      "verifiedAt": "2026-05-08T19:41:24.176Z"
     }
   },
   {
@@ -1626,12 +1623,11 @@
     },
     "notes": "Solid free diagramming replacement for many paid visual tools.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/jgraph/drawio-desktop/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/jgraph/drawio-desktop/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.504Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/jgraph/drawio-desktop/releases/download/v29.7.9/draw.io-arm64-29.7.9.dmg",
+      "label": "draw.io-arm64-29.7.9.dmg",
+      "source": "https://github.com/jgraph/drawio-desktop/releases/tag/v29.7.9",
+      "verifiedAt": "2026-05-08T19:41:24.605Z"
     }
   },
   {
@@ -1677,7 +1673,7 @@
       "url": "https://inkscape.org/release/",
       "label": "Official release page",
       "source": "https://inkscape.org/release/",
-      "verifiedAt": "2026-05-08T19:06:43.504Z"
+      "verifiedAt": "2026-05-08T19:41:24.605Z"
     }
   },
   {
@@ -1724,7 +1720,7 @@
       "url": "https://www.gimp.org/downloads/",
       "label": "Official release page",
       "source": "https://www.gimp.org/downloads/",
-      "verifiedAt": "2026-05-08T19:06:43.504Z"
+      "verifiedAt": "2026-05-08T19:41:24.605Z"
     }
   },
   {
@@ -1770,7 +1766,7 @@
       "url": "https://krita.org/en/download/",
       "label": "Official release page",
       "source": "https://krita.org/en/download/",
-      "verifiedAt": "2026-05-08T19:06:43.504Z"
+      "verifiedAt": "2026-05-08T19:41:24.605Z"
     }
   },
   {
@@ -1817,7 +1813,7 @@
       "url": "https://www.blender.org/download/",
       "label": "Official release page",
       "source": "https://www.blender.org/download/",
-      "verifiedAt": "2026-05-08T19:06:43.504Z"
+      "verifiedAt": "2026-05-08T19:41:24.605Z"
     }
   },
   {
@@ -1863,12 +1859,11 @@
     },
     "notes": "Powerful free alternative to paid screen recording suites.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/obsproject/obs-studio/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/obsproject/obs-studio/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.552Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/obsproject/obs-studio/releases/download/32.1.2/OBS-Studio-32.1.2-macOS-Apple.dmg",
+      "label": "OBS-Studio-32.1.2-macOS-Apple.dmg",
+      "source": "https://github.com/obsproject/obs-studio/releases/tag/32.1.2",
+      "verifiedAt": "2026-05-08T19:41:25.018Z"
     }
   },
   {
@@ -1911,12 +1906,11 @@
     },
     "notes": "Lightweight option for quick captures.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/wulkano/Kap/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/wulkano/Kap/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.601Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/wulkano/Kap/releases/download/v3.6.0/Kap-3.6.0-arm64-mac.zip",
+      "label": "Kap-3.6.0-arm64-mac.zip",
+      "source": "https://github.com/wulkano/Kap/releases/tag/v3.6.0",
+      "verifiedAt": "2026-05-08T19:41:25.423Z"
     }
   },
   {
@@ -1962,12 +1956,11 @@
     },
     "notes": "Classic free audio editing option.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/audacity/audacity/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/audacity/audacity/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.646Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-macOS-3.7.7-arm64.dmg",
+      "label": "audacity-macOS-3.7.7-arm64.dmg",
+      "source": "https://github.com/audacity/audacity/releases/tag/Audacity-3.7.7",
+      "verifiedAt": "2026-05-08T19:41:25.732Z"
     }
   },
   {
@@ -2012,7 +2005,7 @@
       "url": "https://existential.audio/blackhole/",
       "label": "Official release page",
       "source": "https://existential.audio/blackhole/",
-      "verifiedAt": "2026-05-08T19:06:43.646Z"
+      "verifiedAt": "2026-05-08T19:41:25.732Z"
     }
   },
   {
@@ -2057,7 +2050,7 @@
       "url": "https://objective-see.org/products/lulu.html",
       "label": "Official release page",
       "source": "https://objective-see.org/products/lulu.html",
-      "verifiedAt": "2026-05-08T19:06:43.646Z"
+      "verifiedAt": "2026-05-08T19:41:25.732Z"
     }
   },
   {
@@ -2102,7 +2095,7 @@
       "url": "https://objective-see.org/products/knockknock.html",
       "label": "Official release page",
       "source": "https://objective-see.org/products/knockknock.html",
-      "verifiedAt": "2026-05-08T19:06:43.646Z"
+      "verifiedAt": "2026-05-08T19:41:25.732Z"
     }
   },
   {
@@ -2146,7 +2139,7 @@
       "url": "https://objective-see.org/products/oversight.html",
       "label": "Official release page",
       "source": "https://objective-see.org/products/oversight.html",
-      "verifiedAt": "2026-05-08T19:06:43.646Z"
+      "verifiedAt": "2026-05-08T19:41:25.732Z"
     }
   },
   {
@@ -2191,7 +2184,7 @@
       "url": "https://selfcontrolapp.com/",
       "label": "Official release page",
       "source": "https://selfcontrolapp.com/",
-      "verifiedAt": "2026-05-08T19:06:43.646Z"
+      "verifiedAt": "2026-05-08T19:41:25.732Z"
     }
   },
   {
@@ -2236,12 +2229,11 @@
     },
     "notes": "Free local alternative to paid time-tracking analytics.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/ActivityWatch/activitywatch/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/ActivityWatch/activitywatch/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.693Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/ActivityWatch/activitywatch/releases/download/v0.13.2/activitywatch-v0.13.2-macos-x86_64.dmg",
+      "label": "activitywatch-v0.13.2-macos-x86_64.dmg",
+      "source": "https://github.com/ActivityWatch/activitywatch/releases/tag/v0.13.2",
+      "verifiedAt": "2026-05-08T19:41:26.062Z"
     }
   },
   {
@@ -2287,12 +2279,11 @@
     },
     "notes": "Strong free alternative to paid networked note tools.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/logseq/logseq/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/logseq/logseq/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.742Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/logseq/logseq/releases/download/0.10.15/Logseq-darwin-arm64-0.10.15.dmg",
+      "label": "Logseq-darwin-arm64-0.10.15.dmg",
+      "source": "https://github.com/logseq/logseq/releases/tag/0.10.15",
+      "verifiedAt": "2026-05-08T19:41:26.406Z"
     }
   },
   {
@@ -2339,12 +2330,11 @@
     },
     "notes": "Great for users leaving subscription note apps.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/laurent22/joplin/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/laurent22/joplin/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.790Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/laurent22/joplin/releases/download/v3.6.11/Joplin-3.6.11-arm64.DMG",
+      "label": "Joplin-3.6.11-arm64.DMG",
+      "source": "https://github.com/laurent22/joplin/releases/tag/v3.6.11",
+      "verifiedAt": "2026-05-08T19:41:26.754Z"
     }
   },
   {
@@ -2390,12 +2380,11 @@
     },
     "notes": "Better fit than generic notes apps for writers and academics.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/Zettlr/Zettlr/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/Zettlr/Zettlr/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.836Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/Zettlr/Zettlr/releases/download/v4.5.0/Zettlr-4.5.0-arm64.dmg",
+      "label": "Zettlr-4.5.0-arm64.dmg",
+      "source": "https://github.com/Zettlr/Zettlr/releases/tag/v4.5.0",
+      "verifiedAt": "2026-05-08T19:41:27.068Z"
     }
   },
   {
@@ -2440,12 +2429,11 @@
     },
     "notes": "A free Typora-style editor for Markdown writing.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/marktext/marktext/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/marktext/marktext/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.886Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-arm64.dmg",
+      "label": "marktext-arm64.dmg",
+      "source": "https://github.com/marktext/marktext/releases/tag/v0.17.1",
+      "verifiedAt": "2026-05-08T19:41:27.461Z"
     }
   },
   {
@@ -2490,12 +2478,11 @@
     },
     "notes": "Good alternative for Notion-style workflows with more local control.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/AppFlowy-IO/AppFlowy/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.933Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.11.8/AppFlowy-0.11.8-macos-arm64.dmg",
+      "label": "AppFlowy-0.11.8-macos-arm64.dmg",
+      "source": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.11.8",
+      "verifiedAt": "2026-05-08T19:41:27.775Z"
     }
   },
   {
@@ -2540,12 +2527,11 @@
     },
     "notes": "Core local AI utility for Mac users who want models on device.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/ollama/ollama/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/ollama/ollama/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:43.980Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/ollama/ollama/releases/download/v0.23.2/ollama-darwin.tgz",
+      "label": "ollama-darwin.tgz",
+      "source": "https://github.com/ollama/ollama/releases/tag/v0.23.2",
+      "verifiedAt": "2026-05-08T19:41:28.095Z"
     }
   },
   {
@@ -2590,12 +2576,11 @@
     },
     "notes": "Friendly app layer for local model exploration.",
     "resolvedDownload": {
-      "kind": "fallback",
-      "url": "https://github.com/janhq/jan/releases/latest",
-      "label": "Verified source page",
-      "source": "https://github.com/janhq/jan/releases/latest",
-      "verifiedAt": "2026-05-08T19:06:44.027Z",
-      "warning": "GitHub latest release failed: 403"
+      "kind": "github-release",
+      "url": "https://github.com/janhq/jan/releases/download/v0.7.9/Jan_0.7.9_universal.dmg",
+      "label": "Jan_0.7.9_universal.dmg",
+      "source": "https://github.com/janhq/jan/releases/tag/v0.7.9",
+      "verifiedAt": "2026-05-08T19:41:28.412Z"
     }
   }
 ]

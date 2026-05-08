@@ -21,13 +21,12 @@ jobs:
       - run: npm run build
       - run: npm run sync:macos
       - run: npm run macos:build
-      - run: cd apps/macos && ./script/build_and_run.sh --package-only
-      - run: ditto -c -k --sequesterRsrc --keepParent apps/macos/dist/MacAltHub.app MacAltHub.app.zip
+      - run: npm run release:package
       - uses: actions/upload-artifact@v4
         with:
           name: MacAltHub-release
           path: |
-            MacAltHub.app.zip
+            dist/MacAltHub-*.zip
+            dist/MacAltHub-*.zip.sha256
             content/releases/macalthub-appcast.json
             dist/release-manifest.json
-
