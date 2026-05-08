@@ -1,0 +1,25 @@
+name: Catalog verification
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "27 8 * * *"
+  pull_request:
+    paths:
+      - "content/**"
+      - "packages/catalog/**"
+      - "scripts/verify-catalog.mjs"
+
+jobs:
+  verify:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test -w @macalthub/catalog
+      - run: npm run verify:catalog
+

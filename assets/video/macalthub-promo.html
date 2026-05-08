@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MacAltHub Promo Composition</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      html, body { margin: 0; background: #f5f7fb; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; }
+      [data-composition-id="macalthub-promo"] { width: 1920px; height: 1080px; background: #f5f7fb; color: #111827; overflow: hidden; position: relative; }
+      .scene-content { width: 100%; height: 100%; box-sizing: border-box; padding: 120px 150px; display: flex; flex-direction: column; justify-content: center; gap: 32px; }
+      h1 { font-size: 122px; line-height: .94; margin: 0; max-width: 1180px; letter-spacing: 0; }
+      p { font-size: 42px; color: #667085; margin: 0; max-width: 900px; line-height: 1.25; }
+      .window { position: absolute; right: 120px; top: 170px; width: 620px; height: 690px; border-radius: 38px; background: white; border: 2px solid #d9e0ea; box-shadow: 0 40px 110px rgba(17,24,39,.16); padding: 46px; box-sizing: border-box; }
+      .card { height: 136px; border: 2px solid #e5eaf2; border-radius: 22px; display: flex; align-items: center; gap: 24px; padding: 22px; margin-bottom: 20px; }
+      .icon { width: 74px; height: 74px; border-radius: 22px; background: #0a84ff; }
+      .lines { flex: 1; }
+      .line { height: 20px; border-radius: 10px; background: #111827; margin-bottom: 16px; }
+      .line.small { width: 70%; background: #98a2b3; height: 14px; }
+      .badge { display: inline-flex; align-items: center; height: 52px; border-radius: 18px; background: #30d158; color: white; padding: 0 26px; font-size: 28px; font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <div data-composition-id="macalthub-promo" data-width="1920" data-height="1080">
+      <div class="scene-content">
+        <h1>Find the free Mac utility before you pay.</h1>
+        <p>Verified sources. Direct downloads. No Discord gates.</p>
+        <div class="badge">Browse MacAltHub</div>
+      </div>
+      <div class="window">
+        <div class="card"><div class="icon"></div><div class="lines"><div class="line"></div><div class="line small"></div></div></div>
+        <div class="card"><div class="icon" style="background:#30d158"></div><div class="lines"><div class="line"></div><div class="line small"></div></div></div>
+        <div class="card"><div class="icon" style="background:#ff9f0a"></div><div class="lines"><div class="line"></div><div class="line small"></div></div></div>
+        <div class="card"><div class="icon" style="background:#8e52ff"></div><div class="lines"><div class="line"></div><div class="line small"></div></div></div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("h1", { y: 80, opacity: 0, duration: .8, ease: "power3.out" }, 0)
+        .from("p", { y: 45, opacity: 0, duration: .6, ease: "power3.out" }, .25)
+        .from(".badge", { y: 28, opacity: 0, duration: .5, ease: "power2.out" }, .55)
+        .from(".window", { x: 100, opacity: 0, rotate: 2, duration: .8, ease: "power3.out" }, .25)
+        .from(".card", { y: 35, opacity: 0, stagger: .12, duration: .48, ease: "power2.out" }, .65);
+      window.__timelines = { "macalthub-promo": tl };
+      tl.play();
+    </script>
+  </body>
+</html>
+

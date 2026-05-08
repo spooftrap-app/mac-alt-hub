@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run version:check
+      - run: npm run test
+      - run: npm run build
+      - run: npm run sync:macos
+      - run: npm run macos:build
+      - run: cd apps/macos && ./script/build_and_run.sh --package-only
+      - run: ditto -c -k --sequesterRsrc --keepParent apps/macos/dist/MacAltHub.app MacAltHub.app.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MacAltHub-release
+          path: |
+            MacAltHub.app.zip
+            content/releases/macalthub-appcast.json
+            dist/release-manifest.json
+

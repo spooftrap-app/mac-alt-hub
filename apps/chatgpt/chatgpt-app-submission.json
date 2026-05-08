@@ -1,0 +1,22 @@
+{
+  "name": "MacAltHub",
+  "description": "Find verified alternatives to paid macOS utility apps, compare options, and inspect source and license signals.",
+  "category": "productivity",
+  "tools": [
+    {
+      "name": "search_alternatives",
+      "reason": "Searches the read-only MacAltHub catalog for alternatives to paid Mac apps."
+    },
+    {
+      "name": "get_app_detail",
+      "reason": "Returns license, price, trust signals, and official source metadata for a selected app."
+    },
+    {
+      "name": "compare_apps",
+      "reason": "Compares two to four alternatives side by side."
+    }
+  ],
+  "data_handling": "Read-only catalog metadata. No user accounts, no mutations, no installer execution.",
+  "auth": "none"
+}
+

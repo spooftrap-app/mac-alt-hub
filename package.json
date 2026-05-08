@@ -1,0 +1,33 @@
+{
+  "name": "mac-alt-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A macOS-style hub for verified direct-download alternatives to paid Mac utility apps.",
+  "workspaces": [
+    "apps/web",
+    "apps/chatgpt",
+    "packages/catalog",
+    "packages/design"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @macalthub/web",
+    "build": "npm run build -w @macalthub/catalog && npm run build -w @macalthub/chatgpt && npm run build -w @macalthub/web",
+    "typecheck": "npm run typecheck -w @macalthub/catalog && npm run typecheck -w @macalthub/chatgpt && npm run typecheck -w @macalthub/web",
+    "lint": "npm run lint -w @macalthub/web",
+    "test": "npm run test -w @macalthub/catalog && npm run test -w @macalthub/chatgpt",
+    "verify:catalog": "node scripts/verify-catalog.mjs",
+    "sync:macos": "node scripts/sync-macos-catalog.mjs",
+    "version:check": "node scripts/check-version.mjs",
+    "release:prepare": "node scripts/prepare-release.mjs && npm run sync:macos && npm run version:check",
+    "smoke:web": "node scripts/smoke-web.mjs",
+    "macos:build": "cd apps/macos && swift build",
+    "macos:run": "cd apps/macos && ./script/build_and_run.sh",
+    "launch:assets": "node scripts/generate-launch-assets.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

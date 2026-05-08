@@ -1,0 +1,3 @@
+[actions]
+Run = "cd apps/macos && ./script/build_and_run.sh"
+

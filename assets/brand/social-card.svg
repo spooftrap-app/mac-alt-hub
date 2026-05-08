@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F5F7FB"/>
+  <rect x="80" y="72" width="1040" height="486" rx="34" fill="white" stroke="#D9E0EA" stroke-width="2"/>
+  <circle cx="128" cy="116" r="11" fill="#FF605C"/>
+  <circle cx="162" cy="116" r="11" fill="#FFBD44"/>
+  <circle cx="196" cy="116" r="11" fill="#00CA4E"/>
+  <text x="116" y="211" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="68" font-weight="800" fill="#111827">Find the free Mac utility</text>
+  <text x="116" y="286" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="68" font-weight="800" fill="#111827">before you pay.</text>
+  <text x="120" y="344" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" fill="#667085">Verified sources. Direct downloads. No Discord gates.</text>
+  <rect x="120" y="396" width="244" height="58" rx="18" fill="#0A84FF"/>
+  <text x="154" y="434" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="23" font-weight="700" fill="white">Browse MacAltHub</text>
+  <g transform="translate(690 154)">
+    <rect width="300" height="328" rx="28" fill="#F8FAFC" stroke="#D9E0EA"/>
+    <rect x="28" y="30" width="66" height="66" rx="18" fill="#0A84FF"/>
+    <rect x="118" y="38" width="134" height="18" rx="9" fill="#111827"/>
+    <rect x="118" y="72" width="104" height="12" rx="6" fill="#667085"/>
+    <rect x="28" y="124" width="244" height="1" fill="#D9E0EA"/>
+    <rect x="28" y="152" width="244" height="42" rx="14" fill="#EAF4FF"/>
+    <rect x="28" y="210" width="244" height="42" rx="14" fill="#ECFDF3"/>
+    <rect x="28" y="270" width="146" height="38" rx="14" fill="#30D158"/>
+  </g>
+</svg>
+

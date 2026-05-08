@@ -1,0 +1,18 @@
+{
+  "product": "MacAltHub",
+  "channel": "stable",
+  "currentVersion": "0.1.0",
+  "minimumSystemVersion": "14.0",
+  "generatedAt": "2026-05-08T19:30:34.486Z",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "build": "1",
+      "date": "2026-05-08",
+      "notes": "Initial catalog, website, macOS app, ChatGPT app, direct-download resolver, and verification workflow.",
+      "downloadUrl": "https://github.com/macalthub/macalthub/releases/tag/v0.1.0",
+      "signature": null,
+      "sha256": null
+    }
+  ]
+}
